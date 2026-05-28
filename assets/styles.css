@@ -1,5 +1,5 @@
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;line-height:1.7;color:#2C2C2A;background:#fff;min-height:100vh;padding:0 1rem 4rem}
+body{font-family:sans-serif;line-height:1.7;color:#2C2C2A;background:#fff;min-height:100vh;padding:0 1rem 4rem}
 .shell{max-width:740px;margin:0 auto;padding-top:1.5rem}
 
 /* Nav modules */
@@ -146,6 +146,20 @@ body{font-family:system-ui,-apple-system,sans-serif;line-height:1.7;color:#2C2C2
 .block-warning{border-left:3px solid #EF9F27;background:#FAEEDA;padding:.9rem 1.1rem;border-radius:0 8px 8px 0;margin:.75rem 0}
 .bw-label{font-size:11px;font-weight:600;color:#854F0B;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.4rem}
 .block-warning p{font-size:14px;color:#633806;line-height:1.7}
+
+/* Card flow diagram */
+.block-cf{margin:.75rem 0}
+.cf-row{display:flex;align-items:center;gap:14px;justify-content:center}
+.cf-card{background:#EEF0F9;border:2px solid #7F77DD;border-radius:10px;padding:.8rem 1.2rem;font-size:14px;font-weight:600;color:#2C2C2A;text-align:center;flex:1;max-width:220px;line-height:1.5}
+.cf-arrow{font-size:22px;color:#7F77DD;font-weight:700;flex-shrink:0}
+@keyframes cfEaseIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Card cycle diagram */
+.block-cycle{margin:.75rem 0}
+.cyc-wrap{position:relative;height:160px;max-width:280px;margin:0 auto}
+.cyc-card{position:absolute;width:110px;background:#EEF0F9;border:2px solid #7F77DD;border-radius:10px;padding:.55rem .8rem;font-size:13px;font-weight:600;color:#2C2C2A;text-align:center;line-height:1.4;box-sizing:border-box}
+.cyc-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
 /* Illustration placeholder */
 .block-illus{border:1.5px dashed #D3D1C7;background:#FAFAF8;border-radius:8px;padding:1.5rem 1rem;margin:.75rem 0;text-align:center}

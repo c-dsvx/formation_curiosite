@@ -122,6 +122,47 @@ function renderBlock(b, slideId) {
     case 'warning_box':
       return `<div class="block-warning"><div class="bw-label">⚠ Note</div><p>${b.content}</p></div>`;
 
+    case 'card_flow': {
+      const cards = b.cards || [];
+      const parts = [];
+      cards.forEach((c, i) => {
+        const cardDelay = i * 0.35;
+        parts.push(`<div class="cf-card cf-anim" data-cf-delay="${cardDelay}" style="animation:cfEaseIn .5s ease ${cardDelay}s both">${c.label}</div>`);
+        if (i < cards.length - 1) {
+          const arrowDelay = cardDelay + 0.2;
+          parts.push(`<div class="cf-arrow cf-anim" data-cf-delay="${arrowDelay}" style="animation:cfEaseIn .4s ease ${arrowDelay}s both">→</div>`);
+        }
+      });
+      return `<div class="block-cf"><div class="cf-row">${parts.join('')}</div></div>`;
+    }
+
+    case 'card_cycle': {
+      const cards = b.cards || [];
+      const cid = slideId + '_cy' + (Math.random() * 1e6 | 0);
+      const mkId = 'mk_' + cid;
+      const card = (label, left, top, delay) =>
+        `<div class="cyc-card cf-anim" data-cf-delay="${delay}"
+          style="left:${left}px;top:${top}px;animation:cfEaseIn .5s ease ${delay}s both">${label}</div>`;
+      const path = (d, delay) =>
+        `<path class="cyc-path" data-cy-delay="${delay}" d="${d}"
+          stroke="#7F77DD" stroke-width="1.8" fill="none" marker-end="url(#${mkId})"
+          style="opacity:0;animation:fadeIn .4s ease ${delay}s both"/>`;
+      return `<div class="block-cycle">
+        <div class="cyc-wrap">
+          ${card(cards[0]?.label||'', 85, 0, 0)}
+          ${card(cards[1]?.label||'', 165, 112, 0.55)}
+          ${card(cards[2]?.label||'', 5, 112, 0.95)}
+          <svg class="cyc-svg" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="${mkId}" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0,8 3,0 6" fill="#7F77DD"/></marker></defs>
+            ${path('M 180,40 C 218,68 232,90 220,112', 0.3)}
+            ${path('M 163,132 L 117,132', 0.75)}
+            ${path('M 63,112 C 40,85 60,58 100,40', 1.1)}
+          </svg>
+        </div>
+      </div>`;
+    }
+
     case 'illustration':
       return `<div class="block-illus"><div class="bi-label">Illustration</div><div class="bi-ph">${b.label||'[Illustration à insérer]'}</div></div>`;
 
@@ -389,7 +430,19 @@ function goTo(idx) {
   if (idx < 0) return;
 
   const el = document.getElementById('slide_'+idx);
-  if (el) el.classList.add('active');
+  if (el) {
+    el.classList.add('active');
+    el.querySelectorAll('.cf-anim').forEach(c => {
+      c.style.animation = 'none';
+      void c.offsetWidth;
+      c.style.animation = `cfEaseIn .5s ease ${c.dataset.cfDelay||0}s both`;
+    });
+    el.querySelectorAll('.cyc-path').forEach(p => {
+      p.style.animation = 'none';
+      p.getBoundingClientRect();
+      p.style.animation = `fadeIn .4s ease ${p.dataset.cyDelay||0}s both`;
+    });
+  }
   currentSlide = idx;
   if (idx > (moduleProgress[currentModuleId]||0)) {
     moduleProgress[currentModuleId] = idx; saveState();
@@ -770,7 +823,7 @@ function showAccueil() {
   document.getElementById('formation-shell').style.display = 'none';
   document.getElementById('acc-title').textContent = a.title;
   document.getElementById('acc-subtitle').textContent = a.subtitle;
-  document.getElementById('acc-desc').textContent = a.description;
+  document.getElementById('acc-desc').innerHTML = a.description;
   document.getElementById('acc-details').innerHTML = a.details;
   document.getElementById('acc-audience').innerHTML = a.audience;
   document.getElementById('acc-cta').textContent = a.cta || 'COMMENCER';

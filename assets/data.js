@@ -6,15 +6,15 @@
 const FORMATION = {
 
   title: "Apprendre par curiosité",
-  subtitle: "Une autoformation pour comprendre et favoriser la curiosité en classe",
+  subtitle: "Une formation pour comprendre et favoriser la curiosité dans les salles de classe",
 
   // ── PAGE D'ACCUEIL ────────────────────────────────────────────────────────
   // Éditez les textes ci-dessous. "cta" = texte du bouton commencer.
   accueil: {
     title: "Apprendre à apprendre par curiosité",
-    subtitle: "Une autoformation pour comprendre et favoriser la curiosité en classe",
-    description: "Dans cette formation on va parler de ce qu'est la curiosité, en particulier dans le contexte de la salle de classe. Nous allons essayer de comprendre ses mécanismes sous-jacents. Nous allons aussi voir comment la curiosité s'exprime dans les salles de classes et comment l'encourager chez les élèves.",
-    details: "En <strong>~5h</strong>, nous allons voir ces éléments sous le prisme des théories issues de données de recherche, des cas concrets d'illustration en contexte de classe et des activités et gestes pédagogiques à mettre en place, issues d'études empiriques de terrain.",
+    subtitle: "Une formation pour comprendre et favoriser la curiosité dans les salles de classe",
+    description: "Dans cette formation on va parler de ce qu'est la <strong>curiosité</strong>, en particulier dans le contexte de la salle de classe. Nous allons essayer de comprendre ses mécanismes sous-jacents. Nous allons aussi voir comment la curiosité s'exprime dans les salles de classes et comment l'encourager chez les élèves.",
+    details: "En <strong>~3h</strong>, nous allons voir ces éléments sous le prisme des théories issues de données de recherche, des cas concrets d'illustration en contexte de classe et des activités et gestes pédagogiques à mettre en place, issues d'études empiriques de terrain.",
     audience: "Cette formation est particulièrement destinée à un public d'<strong>enseignants</strong>, mais reste pertinente pour d'autres professionnels de l'éducation, parents, formateurs, ou simplement pour un enrichissement personnel.",
     cta: "COMMENCER"
   },
@@ -44,9 +44,9 @@ const FORMATION = {
         blocks: [
           { type: "text", content: "Bienvenue dans cette formation sur l'apprentissage par curiosité en contexte scolaire. Cette formation a pour objectif d'expliquer ce qu'est la curiosité, en quoi elle est bénéfique pour l'apprentissage et comment l'encourager en classe." },
           { type: "key_points", title: "Dans ce module introductif, nous allons :", items: [
-            "Essayer de cerner ce que vous pensez déjà de la curiosité",
-            "Présenter une définition de la curiosité",
-            "Identifier pourquoi la curiosité est un enjeu pédagogique"
+            "Essayer de cerner <strong>ce que vous pensez déjà de la curiosité</strong>",
+            "Présenter une <strong>définition de la curiosité</strong>",
+            "Identifier pourquoi la curiosité est un <strong>enjeu pédagogique</strong>"
           ]}
         ]
       },
@@ -55,7 +55,7 @@ const FORMATION = {
         id: "m0_s2", tag: "activite",
         title: "Ce que VOUS pensez de la curiosité",
         blocks: [
-          { type: "text", content: "La curiosité est un terme familier, mais plus complexe qu'il n'y paraît... Avant d'entrer dans les contenus, prenez quelques minutes pour identifier ce que vous pensez déjà de la curiosité : qu'est-ce que c'est ? qu'est-ce qu'on exprime quand on est curieux ? comment se sent-on ? Il n'y a pas de bonne réponse ici : l'objectif est simplement de décrire ce que vous pensez." },
+          { type: "text", content: "La curiosité est un terme familier, mais plus complexe qu'il n'y paraît... \nAvant d'entrer dans les contenus, prenez quelques minutes pour identifier ce que vous pensez déjà de la curiosité : <em>qu'est-ce que c'est ? qu'est-ce qu'on exprime quand on est curieux ? comment se sent-on ?</em> \nIl n'y a pas de bonne réponse ici : l'objectif est simplement de décrire ce que vous pensez." },
           { type: "reflection", id: "r_init_1",
             question: "1. Selon vous, qu'est-ce que la curiosité exactement ? À quoi cela vous fait-il penser ?",
             hint: "Les réponses ne sont pas évaluées. Elles vous serviront de point de comparaison au cours de la formation.",
@@ -71,14 +71,14 @@ const FORMATION = {
         title: "La curiosité : un moteur pour l'apprentissage",
         next_label: "SUITE",
         blocks: [
-          { type: "text", content: "La curiosité est une forme de motivation qui pousse à chercher de nouvelles connaissances ou explications — à résoudre une incertitude, à combler une lacune. Finalement, c'est une motivation pour apprendre de nouvelles choses !\nC'est une compétence essentielle à l'apprentissage, importante à encourager chez les élèves." },
+          { type: "text", content: "La curiosité est une <strong>forme de motivation qui pousse à chercher de nouvelles connaissances</strong> ou explications — à résoudre une incertitude, à combler une lacune. Finalement, c'est une <strong>motivation pour apprendre de nouvelles choses</strong> !\nC'est une compétence essentielle à l'apprentissage, importante à encourager chez les élèves." },
           { type: "text", content: "Ressentir de la curiosité peut entraîner une variété de comportements : elle peut pousser à" },
-          { type: "key_points", title: "", items: [
+          { type: "key_points", items: [
             "se poser des questions",
             "être plus attentif à son environnement",
             "interagir avec son environnement : manipuler, expérimenter, investiguer...",
             "réfléchir plus intensément pour essayer de trouver une explication avec les connaissances qu'on a déjà...",
-            "etc."
+            "entre autres"
           ]}
         ]
       },
@@ -88,14 +88,14 @@ const FORMATION = {
         title: "Pourquoi c'est important pour l'apprentissage",
         next_label: "CONTINUER",
         blocks: [
-          { type: "text", content: "Mais ce n'est pas tout ! Quand un élève apprend par curiosité, il prend en charge son propre apprentissage :" },
-          { type: "key_points", title: "", items: [
+          { type: "text", content: "Mais ce n'est pas tout ! Quand un élève apprend par curiosité, <strong>il prend en charge son propre apprentissage</strong> :" },
+          { type: "key_points", items: [
             "c'est lui qui choisit ce qu'il veut explorer,",
-            "qui ajuste la difficulté selon ses besoins,",
-            "et qui persévère pour progresser. Il a plus d'autonomie dans son parcours d'apprentissage."
+            "qui <strong>ajuste la difficulté</strong> selon ses besoins,",
+            "et qui persévère pour progresser. Il a plus d'<strong>autonomie</strong> dans son parcours d'apprentissage."
           ]},
           { type: "text", content: "Nous allons voir qu'en classe apprendre par curiosité est possible. Il peut être encouragé par divers moyens, par exemple en donnant plus d'autonomie aux élèves dans le choix d'exercices, en les guidant pour évaluer eux-mêmes leurs propres compétences pour progresser dans la bonne direction.\nUn apprentissage par curiosité est aussi un apprentissage plus gratifiant. L'effort est mieux accepté car l'élève est motivé par des objectifs d'apprentissage qui ont du sens pour lui, et non par une contrainte externe uniquement. C'est un peu comme dans la pratique sportive : l'effort des entraînements devient plus gratifiant quand on poursuit un objectif qu'on s'est fixé soi-même !\nUn apprentissage qui procure plus d'autonomie et qui est plus gratifiant participe au bien-être des élèves." },
-          { type: "reveal_trigger", label: "CONTINUER" },
+          { type: "reveal_trigger", label: "SUITE" },
           { type: "research_box",
             content: "Étude corrélationnelle sur curiosité et bien-être",
             reference: "[Référence à compléter]",
@@ -217,7 +217,10 @@ const FORMATION = {
         next_label: "CONTINUER AVEC L'ÉTAPE 3",
         blocks: [
           { type: "text", content: "Les lacunes de connaissances et incertitudes qui éveillent la curiosité peuvent devenir des buts d'apprentissage, que l'on choisit de poursuivre pour combler cette lacune et apprendre quelque chose de nouveau." },
-          { type: "illustration", label: "[Lacune de connaissance rencontrée] → [But d'apprentissage par curiosité]" },
+          { type: "card_flow", cards: [
+            { label: "Lacune de connaissance rencontrée" },
+            { label: "But d'apprentissage par curiosité" }
+          ]},
           { type: "text", content: "Comme on a vu avec les lacunes de connaissances, les buts d'apprentissage peuvent être divers et variés : en apprendre plus sur les cathédrales gothiques, progresser en dessin, connaître le nom des nouveaux animaux marins, mieux réussir un exercice par satisfaction personnelle..." },
           { type: "text", content: "(Bien) choisir son but d'apprentissage\n\nChoisir ses buts d'apprentissage par soi-même donne un sentiment de contrôle et d'autonomie sur l'apprentissage, renforçant alors le bien-être des élèves, ce qui peut aussi les aider à mieux apprendre.\n\nSe fixer des buts d'apprentissage implique aussi de choisir le niveau de difficulté qui correspond à notre niveau de compétence, c'est-à-dire un objectif atteignable, sans quoi le niveau de difficulté inadapté peut être source de frustration et démotiver l'élève." },
           { type: "example_box", content: "Un élève qui veut se mettre à lire des livres en anglais. Si l'élève pense avoir un niveau plus élevé qu'il ne l'a, il risque de choisir un livre trop compliqué pour lui. La lecture sera alors difficile et risque de le démotiver." },
@@ -273,7 +276,11 @@ const FORMATION = {
           { type: "text", content: "Pour apprendre en suivant sa curiosité, il est aussi important de reconnaître que l'on a fait des progrès, c'est-à-dire qu'on a appris quelque chose de nouveau." },
           { type: "recap_box", content: "On a vu que les nouvelles informations qu'on obtient quand on a exploré en suivant sa curiosité agissent comme une récompense." },
           { type: "text", content: "Il est important de se rendre compte qu'on progresse et qu'on apprend car le sentiment de récompense que l'on ressent peut renforcer notre envie d'en apprendre plus. Se rendre compte qu'on fait des progrès nous aide donc à rester motivé et renforce notre curiosité, comme dans un cercle vertueux :" },
-          { type: "illustration", label: "[Schéma du cercle vertueux — curiosité → exploration → progrès → curiosité]" },
+          { type: "card_cycle", cards: [
+            { label: "Curiosité" },
+            { label: "Exploration" },
+            { label: "Progrès" }
+          ]},
           { type: "research_box",
             content: "Cette idée provient de l'hypothèse du Progrès d'Apprentissage, qui suggère que chaque progrès d'apprentissage fait par l'apprenant renforce les états de curiosité.",
             reference: "[Référence à compléter]" },
